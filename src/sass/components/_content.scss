@@ -19,11 +19,8 @@
   }
   .left-img {
     height: 100%;
+    width: 100%;
     object-fit: cover;
-
-    @include var.breakpoint(tablet) {
-      width: 100%;
-    }
   }
 
   .dual-content {
@@ -70,12 +67,35 @@
       right: -8%;
     }
 
-    @include var.breakpoint(756px) {
+    @include var.breakpoint(mobile) {
       top: -108%;
+      right: 0;
+      left: 0;
+      margin-inline: auto;
     }
 
-    @include var.breakpoint(708px) {
-      display: none;
+    @include var.breakpoint(731px) {
+      top: -32em;
+    }
+
+    @include var.breakpoint(683px) {
+      top: -30em;
+    }
+
+    @include var.breakpoint(529px) {
+      top: -28em;
+    }
+
+    @include var.breakpoint(480px) {
+      top: -26em;
+    }
+
+    @include var.breakpoint(427px) {
+      top: -23em;
+    }
+
+    @include var.breakpoint(379px) {
+      top: -21em;
     }
   }
 
