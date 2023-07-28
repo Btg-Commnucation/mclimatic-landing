@@ -8,23 +8,29 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-  steps:
-      uses: actions/checkout@v2
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
 
-    - name: Install Dependencies
-      run: npm install
+      - name: Use Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14
 
-    - name: Run Build
-      run: npm run build
+      - name: Install Dependencies
+        run: npm ci
 
-    - name: Deploy to Server
-      uses: appleboy/ssh-action@master
-      with:
-        host: ${{ secrets.HOST }}
-        username: ${{ secrets.USERNAME }}
-        key: ${{ secrets.KEY }}
-        script: |
-          cd /httpdocs
-          git pull
-          npm install
-          npm run build
+      - name: Run Build
+        run: npm run build
+
+      - name: Deploy to Server
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.KEY }}
+          script: |
+            cd /httpdocs
+            git pull
+            npm ci
+            npm run build
