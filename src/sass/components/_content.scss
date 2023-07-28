@@ -1,0 +1,122 @@
+@use "../abstracts" as var;
+
+.container-narrow {
+  max-width: 77%;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @include var.breakpoint(649px) {
+    max-width: 90%;
+  }
+}
+
+#content {
+  .container-narrow {
+    gap: 10.8rem;
+  }
+  .left-img {
+    height: 100%;
+    object-fit: cover;
+
+    @include var.breakpoint(tablet) {
+      width: 100%;
+    }
+  }
+
+  .dual-content {
+    display: grid;
+    grid-template-columns: 0.38fr 0.61fr;
+    place-items: center;
+    width: 100%;
+
+    @include var.breakpoint(tablet) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .right-dual {
+    background: var.$light-blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding: 4.6rem 7rem;
+    position: relative;
+    height: 100%;
+    gap: 2.1rem;
+
+    @include var.breakpoint(902px) {
+      padding: 4.6rem 5rem;
+    }
+
+    @include var.breakpoint(444px) {
+      padding-inline: 2rem;
+    }
+  }
+
+  .illustration {
+    position: absolute;
+    right: 3%;
+    top: -20%;
+
+    @include var.breakpoint(1567px) {
+      right: -10%;
+    }
+
+    @include var.breakpoint(tablet) {
+      right: -8%;
+    }
+
+    @include var.breakpoint(756px) {
+      top: -108%;
+    }
+
+    @include var.breakpoint(708px) {
+      display: none;
+    }
+  }
+
+  h2 {
+    color: var.$blue;
+    @include var.fontSize(26, 700, 33);
+  }
+
+  ul {
+    list-style: none;
+    color: var.$blue;
+    @include var.fontSize(20, 400);
+    display: flex;
+    flex-direction: column;
+    gap: 0.3em;
+    margin-left: 4rem;
+
+    @include var.breakpoint(1851px) {
+      margin-left: 2rem;
+    }
+  }
+}
+
+.proposons {
+  margin-top: 7.9rem;
+  h2 {
+    color: var.$blue;
+    @include var.fontSize(35, 700, 45);
+    text-align: center;
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @include var.fontSize(25, 400, 30);
+    color: var.$blue;
+    margin-top: 0.5em;
+    gap: 0.5em;
+    text-align: center;
+  }
+}

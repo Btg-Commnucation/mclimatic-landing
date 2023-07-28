@@ -1,0 +1,85 @@
+@use "../abstracts" as var;
+
+.container-small {
+  max-width: 50%;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 1.6rem;
+
+  @include var.breakpoint(1572px) {
+    max-width: 70%;
+  }
+
+  @include var.breakpoint(994px) {
+    max-width: 85%;
+  }
+
+  @include var.breakpoint(mobile) {
+    align-items: center;
+  }
+
+  @include var.breakpoint(513px) {
+    max-width: 90%;
+  }
+}
+
+footer {
+  margin-block: 7.9rem 14.7rem;
+  .top {
+    max-width: 67%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 1.4rem;
+
+    img {
+      width: 61.42px;
+      height: 90px;
+    }
+
+    h3 {
+      color: var.$blue;
+      @include var.fontSize(26, 700, 32);
+    }
+
+    @include var.breakpoint(mobile) {
+      max-width: 100%;
+    }
+  }
+
+  .bottom {
+    align-self: end;
+    width: fit-content;
+    max-width: 77%;
+    background: var.$blue;
+    color: white;
+    padding: 5.9rem;
+
+    @include var.breakpoint(mobile) {
+      max-width: 100%;
+    }
+
+    strong {
+      @include var.fontSize(22, 700);
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: start;
+      list-style: none;
+      @include var.fontSize(18, 700);
+
+      a {
+        color: white;
+        text-decoration: none;
+        @include var.fontSize(18, 700);
+      }
+    }
+  }
+}

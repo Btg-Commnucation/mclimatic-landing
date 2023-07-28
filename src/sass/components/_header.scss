@@ -1,0 +1,83 @@
+@use "../abstracts" as var;
+
+.container {
+  padding-block: 3.7rem 15.3rem;
+  max-width: 95%;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  @include var.breakpoint(tablet) {
+    grid-template-columns: 1fr;
+  }
+}
+
+header {
+  .left {
+    border-bottom: 7px solid var.$red;
+
+    @include var.breakpoint(tablet) {
+      display: flex;
+      justify-content: center;
+      width: fit-content;
+      margin-inline: auto;
+    }
+  }
+
+  .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 3rem;
+    background: var.$light-blue;
+    height: 100%;
+    padding-inline: 8.5rem;
+    border-bottom: 7px solid var.$blue;
+
+    @include var.breakpoint(tablet) {
+      padding-block: 8.4rem;
+      align-items: center;
+    }
+
+    @include var.breakpoint(mobile) {
+      padding-inline: 2.5rem;
+    }
+
+    img {
+      width: 168.37px;
+      height: 170.34px;
+    }
+  }
+
+  h1 {
+    @include var.fontSize(25, 700, 40);
+
+    @include var.breakpoint(tablet) {
+      text-align: center;
+    }
+
+    span {
+      color: var.$red;
+    }
+  }
+
+  p {
+    @include var.fontSize(25, 400, 28);
+    color: var.$blue;
+    display: flow-root;
+    max-width: 70%;
+
+    @include var.breakpoint(1569px) {
+      max-width: 80%;
+    }
+
+    @include var.breakpoint(1495px) {
+      max-width: 100%;
+    }
+
+    @include var.breakpoint(tablet) {
+      text-align: center;
+    }
+  }
+}

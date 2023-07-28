@@ -1,14 +1,84 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/src/sass/style.scss">
-    <title>Vite + TS</title>
+    <title>MCLIMATIC</title>
   </head>
   <body>
-    <div id="app"></div>
+    <header>
+      <div class="container">
+        <div class="left">
+          <img src="/m-climatic.png" alt="Photo d'un homme entrain de réparer une climatisation" />
+        </div>
+        <div class="right">
+          <img src="/logo-mclimatic.svg" alt="Logo de MCLIMATIC">
+          <h1>Au service des <span>entreprises</span> et des <span>particuliers</span> depuis 2003.</h1>
+          <p>Mikaël Marcucetti a créé MCLIMATIC pour optimiser vos consommations tout en améliorant votre confort climatique.</p>
+        </div>
+      </div>
+    </header>
+    <section id="content">
+      <div class="container-narrow">
+        <div class="dual-content">
+          <img src="/climatisation.jpg" alt="Image de l'évacuation d'une climatisation" class="left-img">
+          <div class="right-dual">
+            <h2>Dans le domaines du chauffage et de la climatisation réversible, nous vous proposons : </h2>
+            <ul class="list-dual">
+              <li>- Installation neuve,</li>
+              <li>- Rénovation,</li>
+              <li>- Contrat de maintenance et d'entretien (même sur des équipements non posés par nos équipes)</li>
+              <li>- Dépannage</li>
+              <li>- Conseils sur le bon usage de vos équipements pour optimiser vos consommations et profiter le plus longtemps possible des performances de vos installations</li>
+            </ul>
+            <img src="/reversible.svg" alt="Illustration chaud froid" class="illustration" />
+          </div>
+        </div>
+        <div class="dual-content">
+          <img src="/climatisation-allumer.jpg" alt="Image d'une climatisation allumée" class="left-img">
+          <div class="right-dual">
+            <h2>Sur les équipements suivants :</h2>
+            <ul class="list-dual">
+              <li>- Pompe à chaleur (air/eau) sur plancher chauffant ou radiateurs</li>
+              <li>- Climatisation réversible air/air (économies l'hiver et confort l'été) de type murale, gainable, console, sur groupe mono/multisplit et VRV</li>
+              <li>- Chaudières gaz, jusqu'à 400 kW</li>
+              <li>- Aérothermes et radiants gaz</li>
+              <li>- VMC simple et double flux</li>
+              <li>- Ballon eau chaude thermodynamique (ou à résistance électrique « classique »)</li>
+            </ul>
+            <img src="/cle-molette.svg" alt="Illustration d'une clé et d'une certification" class="illustration">
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="proposons">
+      <div class="container-narrow">
+        <h2>Nous proposons nos services aux : </h2>
+        <ul>
+          <li>- particuliers,</li>
+          <li>- PME dans le commerce, les services et l'industrie</li>
+          <li>- espaces tertiaires</li>
+          <li>- collectivés</li>
+        </ul>
+      </div>
+    </section>
+    <footer>
+      <div class="container-small">
+        <div class="top">
+          <img src="/pin.svg" alt="Illustration d'un géopoint">
+          <h3>Nous sommes basés sur Rochecorbon et Chanceaux-sur-Choisille et intervenons de la métropole de Tours à l'ensemble de l'Indre-et-Loire.</h3>
+        </div>
+        <div class="bottom">
+          <strong>Nous sommes à votre écoute et disponibles pour tout projet (et surtout avant-projet) pour améliorer vos consommations ET votre confort climatique</strong>
+          <ul class="contacts">
+            <li>- <a href="tel:+33660094920">06.60.09.49.20</a></li>
+            <li>- <a href="mailto:mmarcucetti@mclimatic.fr">mmarcucetti@mclimatic.fr</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
