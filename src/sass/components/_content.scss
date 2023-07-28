@@ -1,7 +1,7 @@
 @use "../abstracts" as var;
 
 .container-narrow {
-  max-width: 77%;
+  max-width: min(77%, 1495);
   margin-inline: auto;
   display: flex;
   flex-direction: column;
