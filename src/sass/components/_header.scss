@@ -17,6 +17,25 @@ header {
     border-bottom: 7px solid var.$red;
     width: 100%;
     height: 100%;
+    position: relative;
+
+    div {
+      position: absolute;
+      top: 4%;
+      left: 4%;
+      width: 200px;
+      height: 200px;
+      background: var.$blue;
+      border-radius: 50%;
+      font-size: 2rem;
+      margin: auto;
+      color: white;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-inline: 0.5em;
+    }
 
     img {
       object-fit: cover;
@@ -86,5 +105,24 @@ header {
     @include var.breakpoint(tablet) {
       text-align: center;
     }
+  }
+}
+
+.contact-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  list-style: none;
+
+  h4 {
+    font-size: 1.8rem;
+    color: var.$blue;
+    margin-bottom: 0.2em;
+  }
+
+  a {
+    font-size: 1.4rem;
+    text-decoration: none;
   }
 }
