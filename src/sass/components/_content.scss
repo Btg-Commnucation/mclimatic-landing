@@ -119,6 +119,11 @@
   }
 }
 
+p {
+  @include var.fontSize(20, 400);
+  color: var.$blue;
+}
+
 .proposons {
   margin-top: 7.9rem;
   h2 {
