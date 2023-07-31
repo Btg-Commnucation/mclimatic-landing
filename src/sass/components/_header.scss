@@ -61,6 +61,10 @@ header {
     padding-inline: 8.5rem;
     border-bottom: 7px solid var.$blue;
 
+    a {
+      color: black;
+    }
+
     @include var.breakpoint(tablet) {
       padding-block: 8.4rem;
       align-items: center;
