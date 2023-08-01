@@ -30,9 +30,9 @@
       margin-bottom: 10.8rem;
     }
 
-    @include var.breakpoint(1400px) {
+    @include var.breakpoint(1420px) {
       &:last-of-type .illustration {
-        top: -11%;
+        top: -10%;
       }
     }
 
@@ -151,7 +151,7 @@
     @include var.fontSize(26, 700, 33);
     max-width: 80%;
 
-    @include var.breakpoint(1400px) {
+    @include var.breakpoint(1420px) {
       max-width: 95%;
     }
   }
