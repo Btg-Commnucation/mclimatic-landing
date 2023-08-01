@@ -19,22 +19,13 @@ header {
     height: 100%;
     position: relative;
 
-    div {
+    .label {
       position: absolute;
       top: 4%;
       left: 4%;
       width: 200px;
       height: 200px;
-      background: var.$blue;
-      border-radius: 50%;
-      font-size: 2rem;
       margin: auto;
-      color: white;
-      text-align: center;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding-inline: 0.5em;
 
       @include var.breakpoint(688px) {
         top: -6%;
