@@ -14,9 +14,6 @@
 }
 
 #content {
-  .container-narrow {
-    gap: 10.8rem;
-  }
   .left-img {
     height: 100%;
     width: 100%;
@@ -28,6 +25,16 @@
     grid-template-columns: 0.38fr 0.61fr;
     place-items: center;
     width: 100%;
+
+    &:first-of-type {
+      margin-bottom: 10.8rem;
+    }
+
+    @include var.breakpoint(1400px) {
+      &:last-of-type .illustration {
+        top: -14%;
+      }
+    }
 
     @include var.breakpoint(tablet) {
       grid-template-columns: 1fr;
