@@ -1,7 +1,7 @@
 @use "../abstracts" as var;
 
 .container-narrow {
-  max-width: min(77%, 1495);
+  max-width: min(78.5%, 1495px);
   margin-inline: auto;
   display: flex;
   flex-direction: column;
@@ -32,7 +32,7 @@
 
     @include var.breakpoint(1400px) {
       &:last-of-type .illustration {
-        top: -14%;
+        top: -11%;
       }
     }
 
@@ -104,7 +104,7 @@
   .illustration {
     position: absolute;
     right: 3%;
-    top: -20%;
+    top: -15%;
 
     @include var.breakpoint(1567px) {
       right: -10%;
@@ -149,6 +149,7 @@
   h2 {
     color: var.$blue;
     @include var.fontSize(26, 700, 33);
+    max-width: 80%;
   }
 
   ul {
