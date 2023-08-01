@@ -32,6 +32,46 @@
     @include var.breakpoint(tablet) {
       grid-template-columns: 1fr;
     }
+
+    @include var.breakpoint(mobile) {
+      &:last-of-type .illustration {
+        top: -80%;
+      }
+    }
+
+    @include var.breakpoint(698px) {
+      &:last-of-type .illustration {
+        top: -70%;
+      }
+    }
+
+    @include var.breakpoint(647px) {
+      &:last-of-type .illustration {
+        top: -79%;
+      }
+    }
+
+    @include var.breakpoint(586px) {
+      &:last-of-type .illustration {
+        top: -65%;
+      }
+    }
+
+    @include var.breakpoint(509px) {
+      &:last-of-type .illustration {
+        top: -55%;
+      }
+    }
+    @include var.breakpoint(453px) {
+      &:last-of-type .illustration {
+        top: -40%;
+      }
+    }
+    @include var.breakpoint(354px) {
+      &:last-of-type .illustration {
+        top: -30%;
+      }
+    }
   }
 
   .right-dual {
