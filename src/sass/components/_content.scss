@@ -150,6 +150,10 @@
     color: var.$blue;
     @include var.fontSize(26, 700, 33);
     max-width: 80%;
+
+    @include var.breakpoint(1400px) {
+      max-width: 95%;
+    }
   }
 
   ul {
