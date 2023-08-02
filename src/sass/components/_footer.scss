@@ -67,6 +67,11 @@ footer {
       @include var.fontSize(22, 700);
     }
 
+    strong:last-of-type {
+      margin-top: 1em;
+      display: flow-root;
+    }
+
     ul {
       margin-top: 2.6rem;
       display: flex;
