@@ -79,7 +79,7 @@ footer {
       a {
         color: white;
         text-decoration: none;
-        @include var.fontSize(18, 700);
+        @include var.fontSize(22, 700);
       }
     }
   }
